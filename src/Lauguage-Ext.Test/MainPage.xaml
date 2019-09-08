@@ -10,7 +10,7 @@
         HorizontalOptions="Center"
         VerticalOptions="Center">
 
-        <Button Text="1. Create object with Record&lt;1&gt;" 
+        <Button Text="1. Create object with Record&lt;T&gt;" 
                 Clicked="Test_OnClicked"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"></Button>
