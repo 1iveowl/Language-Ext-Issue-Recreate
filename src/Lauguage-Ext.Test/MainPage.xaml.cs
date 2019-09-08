@@ -1,7 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using Lauguage_Ext.Test.Model;
 using Xamarin.Forms;
+using static LanguageExt.Prelude;
+
 
 namespace Lauguage_Ext.Test
 {
@@ -17,8 +20,17 @@ namespace Lauguage_Ext.Test
 
         private void Test_OnClicked(object sender, EventArgs e)
         {
-            // This makes the app crash most of the time. Why?
+            // This crashes on every version of Language-Ext later than 3.1.24
             var objA = new ObjectA<object>(new object());
+        }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            // this crashes on every version of Language-Ext later than 3.1.24
+            var testFunc = fun((int x) => Task.Delay(TimeSpan.FromSeconds(x)));
+
+            // The code never gets to this.
+            testFunc(5).Wait();
         }
     }
 }

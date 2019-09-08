@@ -10,9 +10,15 @@
         HorizontalOptions="Center"
         VerticalOptions="Center">
 
-        <Button Text="Press here and the app will crash most times" Clicked="Test_OnClicked"
+        <Button Text="1. Create object with Record&lt;1&gt;" 
+                Clicked="Test_OnClicked"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"></Button>
+
+        <Button Text="2. Create simple Function with fun(..)" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="Button_OnClicked"></Button>
     </StackLayout>
 
 </ContentPage>
